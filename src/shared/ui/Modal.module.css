@@ -1,0 +1,59 @@
+@reference "../../app/globals.css";
+
+.shell {
+  @apply fixed inset-0 z-[100] flex items-center justify-center overflow-hidden p-3 sm:p-6;
+}
+
+.backdrop {
+  @apply fixed inset-0 bg-slate-900/65 backdrop-blur-xs transition-opacity duration-200;
+  animation: modalFadeIn 0.2s ease-out forwards;
+}
+
+.dialog {
+  @apply relative z-10 flex max-h-[92vh] w-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl transition-all duration-200;
+  animation: modalZoomIn 0.2s ease-out forwards;
+}
+
+.header {
+  @apply flex shrink-0 items-center justify-between border-b border-gray-100 bg-gray-50/80 px-5 py-3.5 sm:px-6;
+}
+
+.title {
+  @apply text-sm font-bold text-gray-900 sm:text-base;
+}
+
+.subtitle {
+  @apply mt-0.5 text-xs text-gray-500;
+}
+
+.closeButton {
+  @apply cursor-pointer rounded-lg p-1.5 text-gray-400 transition hover:bg-gray-200/60 hover:text-gray-600;
+}
+
+.body {
+  @apply flex-1 overflow-y-auto px-5 py-4 text-xs sm:px-6;
+}
+
+.footer {
+  @apply flex shrink-0 items-center justify-between gap-3 border-t border-gray-100 bg-gray-50/70 px-5 py-3 sm:px-6;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

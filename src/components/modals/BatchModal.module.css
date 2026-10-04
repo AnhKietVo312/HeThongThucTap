@@ -1,0 +1,33 @@
+@reference "../../app/globals.css";
+
+.form {
+  @apply space-y-4 text-xs;
+}
+
+.threeColumnGrid {
+  @apply grid grid-cols-1 gap-3 sm:grid-cols-3;
+}
+
+.twoColumnGrid {
+  @apply grid grid-cols-1 gap-3 sm:grid-cols-2;
+}
+
+.infoTitle {
+  @apply flex items-center gap-1.5 text-[11px] font-bold uppercase text-huit-blue;
+}
+
+.sectionTitle {
+  @apply text-[11px] font-bold uppercase text-gray-700;
+}
+
+.dateLabel {
+  @apply mb-1 block text-[11px] font-semibold text-gray-600;
+}
+
+.selectField {
+  @apply font-medium;
+}
+
+.monoField {
+  @apply font-mono;
+}
